@@ -39,3 +39,19 @@ console.log(" inside backtick only i can assign the variable");
 var step = "step";
 let next = "6";
 let result = step + next;
+// step7
+
+var hello = "hello";
+var i = 1;
+var am = 7;
+var shirine = "shirine";
+console.log(hello == shirine);
+console.log(hello === shirine);
+console.log(hello !== shirine);
+console.log(hello != shirine);
+
+console.log(i > am);
+console.log(i >= am);
+console.log(i < am);
+console.log(i <= am);
+
