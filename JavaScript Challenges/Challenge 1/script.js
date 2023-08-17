@@ -35,3 +35,7 @@ const tryThisAlso = `This is my new version, it’s the ${2 + 3}th version`;
 console.log(counter, backtick, singleQuote, doubleQuote, tryThisAlso);
 console.log(" inside backtick only i can assign the variable");
 
+// step 6
+var step = "step";
+let next = "6";
+let result = step + next;
