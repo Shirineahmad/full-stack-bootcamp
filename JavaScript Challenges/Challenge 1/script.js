@@ -8,7 +8,7 @@ let lastName = "ahmad";
 const DOB = "1996 / 3 / 4";
 age = 28;
 lastName = "Ahmad";
-DOB = "1996 / 4 / 3";
+// DOB = "1996 / 4 / 3";
 console.log(lastName, age, DOB);
 
 //  step4
@@ -22,4 +22,16 @@ let none = null;
 let defined = undefined;
 console.log("num:", typeof (num), "character:", typeof (character),
     "str:", typeof (str), "bool", typeof (bool), "none", typeof (none), "defined", typeof (defined));
-    
+
+// step 5
+var txt = 'myText';
+let text = `myText`;
+const tx = "myText";
+const counter = 3;
+const backtick = `This is my text using backticks ${counter} times`;
+const singleQuote ='This is my text using single quotations ${counter} times';
+const doubleQuote ="This is my text using double quotations ${counter} times";
+const tryThisAlso = `This is my new version, it’s the ${2 + 3}th version`;
+console.log(counter, backtick, singleQuote, doubleQuote, tryThisAlso);
+console.log(" inside backtick only i can assign the variable");
+
