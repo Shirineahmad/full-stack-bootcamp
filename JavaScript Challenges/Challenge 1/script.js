@@ -55,3 +55,15 @@ console.log(i >= am);
 console.log(i < am);
 console.log(i <= am);
 
+// step 8
+var result0 = 5 + 3 * 2;
+ // asnwer is 11 :3*2 before adding 5
+console.log(result0)
+var result1 = 10 / 2 + 3;
+// 10/2 before adding 2 is 8
+console.log(result1)
+var result2 = 10 / (2 + 3);
+// parameter before division 10 is 2
+console.log(result2)
+
+
