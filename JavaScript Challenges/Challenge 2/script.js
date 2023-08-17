@@ -5,7 +5,7 @@ if (age > 20) {
 }
 else {
     check(false);
-    
+
 }
 function check(value) {
     if (value) {
@@ -25,19 +25,36 @@ console.log(expression2);
 console.log(expression3);
 console.log(expression4);
 // step2
-const age = 25;
+const agee = 25;
 const hasDriverLicense = true;
 const hasCar = false;
 
 var canDrive = false;
-if (age >= 18 && hasDriverLicense == true) {
+if (agee >= 18 && hasDriverLicense == true) {
     canDrive = true;
 }
 var canRentCar = false;
-if (age >= 22 && hasDriverLicense == true) {
+if (agee >= 22 && hasDriverLicense == true) {
     canRentCar = true;
 }
 var needDriver = false;
-if (age < 22 && hasDriverLicense == false && hasCar==false ) {
+if (agee < 22 && hasDriverLicense == false && hasCar == false) {
     needDriver = true;
+}
+// step 3
+var role = "admin";
+switch (role) {
+    case "admin":
+        console.log("You have read and write access for the data");
+        break;
+    case "user":
+        console.log("You have only read access for the data");
+        break;
+    case "guest":
+        console.log("You have no access for the data");
+        break;
+
+    default:
+        console.log("User role is not recoginized");
+        break;
 }
