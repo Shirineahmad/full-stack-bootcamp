@@ -43,3 +43,11 @@ function compute(num1, num2, operation) {
 }
 console.log("compute 2*4", compute(2, 4,"*"));
 
+// "Challenge 3 - Done with step 1"
+// Arrow Function
+var globalVar = "global";
+const squareNumber = () => {
+    var localVar;
+}
+localVar = local;
+console.log(localVar);
