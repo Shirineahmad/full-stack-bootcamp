@@ -49,5 +49,33 @@ var globalVar = "global";
 const squareNumber = () => {
     var localVar;
 }
-localVar = local;
-console.log(localVar);
+// localVar = local;
+// console.log(localVar);
+// Step 3: Loops
+// For Loop
+for (let i = 1; i <= 10; i++){
+    console.log("for loop",i);
+}
+// While Loop
+var numbers = 10;
+while (numbers >= 1) {
+    console.log("while",numbers);
+    numbers--;
+    
+}
+//  Do-While Loop with Conditionals
+var numbers2 = 1;
+do {
+    if (numbers2 % 2 == 0) {
+        console.log("do while",numbers2)
+    }
+    numbers2++;
+    
+} while (" do while",numbers2<=10);
+// Advanced Loop Challenge
+var fruits = ["avocado", "passion", "banana", "mango", "orange", "kiwi"];
+for (let i = 0; i < fruits.length; i++){
+    if (fruits[i].length > 5) {
+        console.log(fruits[i]);
+    }
+}
