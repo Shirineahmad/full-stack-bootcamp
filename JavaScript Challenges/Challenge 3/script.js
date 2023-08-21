@@ -79,3 +79,29 @@ for (let i = 0; i < fruits.length; i++){
         console.log(fruits[i]);
     }
 }
+//  Bonus Step: Advanced Concepts
+// Higher Order Function
+// function processArray(arrray) {
+    
+    
+// }
+// console.log("processArray", processArray([1,2,3,4,5],new(1)))
+// closures
+// function multiplier(num1) {
+//     return function another(num2) {
+//         returnnum1 * num2;
+//     }
+    
+// }
+// function another(num1,num2) {
+// return num1*num2
+// }
+// console.log("bonus2",multiplier(3));
+function multiplier(num1) {
+    return function another(num2) {
+        return num1 * num2;
+    }
+
+}
+let k = multiplier(5);
+console.log(k(2));
