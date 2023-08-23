@@ -77,4 +77,39 @@ buttonForm.addEventListener("click", () => {
     console.log(inputName.value,inputEmail.value);
 
 })
+// Step 3: Advanced DOM Manipulations
+// DOM Cloning
+document.addEventListener("DOMContentLoaded", function () {
+let divClone = document.getElementById("original");
+let cloneDiv = divClone.cloneNode(true);
+let pClone = document.querySelector("p");
+pClone.textContent="Cloned";
+document.body.appendChild(cloneDiv);
+const cloneBtn = document.getElementById("clone-btn");
+cloneBtn.addEventListener("click", () => {
+    if (cloneDiv.style.display == "none") {
+        cloneDiv.style.display = "block";
+    }
+    else {
+        cloneDiv.style.display = "none";
+    }
+})
+});
+//  Element Removal
+const btnRemove = document.createElement("button");
+btnRemove.textContent = "Remove Header";
+document.body.appendChild(btnRemove);
+btnRemove.addEventListener("click", () => {
+    header.style.display = "none";
+    
+})
+// Inserting Elements
+function addElement() {
+    let newElement = document.createElement("p");
+    newElement.textContent = "this is element before footer";
+    footer.parentNode.insertBefore(newElement, footer);
+    console.log(newElement);
+
+}
+addElement();
 
