@@ -33,7 +33,7 @@ console.log(nested);
 // Rest with Destructuring
 var first = fiveNumbers.slice(0,1);
 var second = fiveNumbers.slice(1,2);
-var restOfNumbers = [fiveNumbers.slice(2)];
+var restOfNumbers =[fiveNumbers.slice(2)];
 console.log(restOfNumbers);
 //  Merging and Overwriting with Spread
 var object1 = { color: "white", text: "first" }
