@@ -81,11 +81,12 @@ newForm.addEventListener("submit", (event) => {
     if (password.value !== confirmPassord.value) {
         event.preventDefault(); // Prevent form submission
         let errorDiv = document.createElement("div");
-        errorDiv.textContent = "Passwords do not match"; // Display error message
+        errorDiv.textContent = "Passwords do not match";
+        document.body.appendChild(errorDiv);// Display error message
     } else {
         errorDiv.textContent = ""; // Clear error message if passwords match
     }
-    document.body.appendChild(errorDiv);
+    
 })
 
 
