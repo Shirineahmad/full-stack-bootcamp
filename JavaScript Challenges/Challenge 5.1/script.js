@@ -57,3 +57,36 @@ document.addEventListener("keydown", (event) => {
 
     }
 })
+// Step 3:
+let newForm = document.createElement("form");
+document.body.appendChild(newForm);
+let fullName = document.createElement("input");
+fullName.type = "text";
+let emailAdress = document.createElement("input");
+emailAdress.type = "email";
+let password = document.createElement("input");
+password.type = "password";
+let confirmPassord = document.createElement("input");
+confirmPassord.type = "password";
+let submitButton = document.createElement("input");
+submitButton.type = "submit";
+newForm.appendChild(fullName);
+newForm.appendChild(emailAdress);
+newForm.appendChild(password);
+newForm.appendChild(confirmPassord);
+newForm.appendChild(submitButton);
+newForm.addEventListener("submit", (event) => {
+    
+       
+    if (password.value !== confirmPassord.value) {
+        event.preventDefault(); // Prevent form submission
+        let errorDiv = document.createElement("div");
+        errorDiv.textContent = "Passwords do not match"; // Display error message
+    } else {
+        errorDiv.textContent = ""; // Clear error message if passwords match
+    }
+    document.body.appendChild(errorDiv);
+})
+
+
+
