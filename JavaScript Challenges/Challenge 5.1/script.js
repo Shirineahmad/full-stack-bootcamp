@@ -15,3 +15,45 @@ button1.addEventListener("click", () => {
     let random = Math.floor((Math.random() * 100) + 1);
     button1.textContent = `Clicked ${random}!`;
 })
+// ## Step 2:
+let h1 = document.createElement("h1");
+h1.textContent = "break";
+document.body.appendChild(h1);
+h1.style.border = "10px dotted green";
+
+
+let isHidden = true;
+document.addEventListener("keydown", (event) => {
+   
+    switch (event.key) {
+        case 'a':
+        case 'A':
+            h1.style.color = "red";
+            break;
+        case 's':
+        case 'S':
+            h1.style.marginLeft = "10px";
+            break;
+        case 'd':
+        case 'D':
+            let j = document.createElement("p");
+            j.textContent ="Key D was pressed!"
+            document.body.appendChild(j);
+            break;
+        case 'w':
+        case 'W':
+            
+            if (isHidden) {
+                h1.style.display = "flex";
+            } else {
+                h1.style.display = "none";
+            }
+            
+            isHidden = !isHidden; 
+            break;
+        case ' ':
+            h1.style.fontSize = "large";
+            break;
+
+    }
+})
