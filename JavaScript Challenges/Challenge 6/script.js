@@ -51,4 +51,36 @@ delayedPromise.then(() => {
     .then((chainedMessage) => {
         console.log(chainedMessage);
     });
+// step2
+
+function simulateNetworkRequest() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (Math.random() < 0.5) {
+                resolve("Data fetched successfully!");
+            } else {
+                reject("Network Error!");
+            }
+        }, 3000); // 3 seconds 
+    });
+}
+
+async function fetchData() {
+    try {
+        const response = await simulateNetworkRequest();
+        console.log(response);
+
+        const postResponse = await fetch("https://jsonplaceholder.typicode.com/posts/1%22");
+        if (!postResponse.ok) {
+            throw new Error("Failed to fetch post data");
+        }
+
+        const postData = await postResponse.json();
+        console.log("Fetched post data:", postData);
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+fetchData();
 
