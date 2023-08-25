@@ -84,3 +84,35 @@ async function fetchData() {
 
 fetchData();
 
+// step3
+
+const fetchPostsData = async () => {
+    const postIds = [1, 2, 3];
+    const fetchPromises = postIds.map(id =>
+        fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+            .then(response => response.json())
+    );
+
+    const results = await Promise.all(fetchPromises);
+    console.log("Fetched post data:", results);
+
+    fetchPostsData();
+
+
+
+    const fetchAndProcessPostsSequentially = async () => {
+        const postIds = [4, 5, 6, 7, 8];
+        const results = [];
+
+        for await (const id of postIds) {
+            const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+            const postData = await response.json();
+            results.push(postData);
+            console.log("Processed post:", postData);
+        }
+
+        console.log("Sequential processing completed. Results:", results);
+    };
+};
+
+fetchAndProcessPostsSequentially();
