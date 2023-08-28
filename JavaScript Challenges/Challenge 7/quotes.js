@@ -94,3 +94,77 @@ const quotesArray = [
       "Hell, there are no rules here-- we're trying to accomplish something.",
   },
 ];
+// step2
+// let blockq = document.createElement("blockquote");
+// blockq.textContent = `I think that beauty can injure you to death. It can cause an injury that can
+//   never be cured. Or it can so traumatise you, your life changes direction. The
+//   beauty of the harmony of nature that is forever lost, or a daily rite that you
+//   perform, or diving into the sea for a swim. Those experiences are going to
+//   mark you.`;
+
+// let divAutor = document.createElement("div");
+// divAutor.className = "author";
+// let dash=document.createTextNode("\u2014")
+// let cite1 = document.createElement("cite");
+// cite1.textContent = "Toni Servillo ";
+// divAutor.append(dash,cite1);
+// blockq.appendChild(divAutor);
+// document.body.appendChild(blockq);
+
+
+
+// step3
+for (data of quotesArray) {
+  let blockq = document.createElement("blockquote");
+  blockq.textContent = data.content;
+  let quotes = document.getElementById("quotes");
+  let divAutor = document.createElement("div");
+  divAutor.className = "author";
+  let dash = document.createTextNode("\u2014")
+  let cite1 = document.createElement("cite");
+  cite1.textContent = data.author;
+  divAutor.append(dash, cite1);
+  blockq.appendChild(divAutor);
+  quotes.appendChild(blockq);
+}
+// Step 4:
+let search = document.getElementById("authorSearch");
+let btnSubmit = document.getElementById("authorBtn");
+let quotes = document.getElementById("quotes");
+btnSubmit.addEventListener("click", () => {
+  for (let i = 0; i < quotesArray.length; i++) {
+
+
+    for (let i = 0; i < quotesArray.length; i++) {
+      if (search.value === quotesArray[i].author) {
+        // Remove existing quotes before adding the new one
+        while (quotes.firstChild) {
+          quotes.removeChild(quotes.firstChild);
+        }
+
+        let blockq = document.createElement("blockquote");
+        blockq.textContent = quotesArray[i].content;
+
+        let divAutor = document.createElement("div");
+        divAutor.className = "author";
+        let dash = document.createTextNode("\u2014")
+        let cite1 = document.createElement("cite");
+        cite1.textContent = quotesArray[i].author;
+        divAutor.append(dash, cite1);
+        blockq.appendChild(divAutor);
+        quotes.appendChild(blockq);
+
+
+      }
+    }
+  }
+})
+
+
+
+
+
+
+
+
+
