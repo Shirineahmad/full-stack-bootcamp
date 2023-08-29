@@ -19,8 +19,21 @@ delay(10000)
 fetch("https://uselessfacts.jsph.pl/random.json?language=en")
     .then(response => response.json())
     .then(response=> {
-        console.log(respons.text)
+        console.log(response.text);
     })
     .catch(error => {
         console.log("error",error);
     });
+    // Step 3: Rewrite with Async/Await
+async function fetchData() {
+    try {
+        let response2 = await fetch("https://uselessfacts.jsph.pl/random.json?language=en");
+        let data2 = await response2.json();
+        console.log(data2)
+    } catch (error) {
+        console.error("error ", error);
+        
+    }
+};
+fetchData();
+// 
